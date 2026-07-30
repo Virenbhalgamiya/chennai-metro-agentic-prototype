@@ -4,6 +4,56 @@ A robust, multilingual, agentic Help & Grievance management system designed for 
 
 ---
 
+## 🚀 Installation & Local Setup
+
+Follow these steps to run the Chennai Metro Agentic AI Prototype on your local machine.
+
+### Prerequisites
+- Python 3.10 or higher
+- A [Groq API Key](https://console.groq.com/keys) (Free tier is perfectly fine)
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/chennai-metro-agentic-prototype.git
+cd chennai-metro-agentic-prototype
+```
+
+### 2. Set Up Virtual Environment
+```bash
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# Mac/Linux:
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure Environment Variables
+Create a `.env` file in the root directory and add your Groq API key:
+```env
+GROQ_API_KEY=gsk_your_api_key_here
+GROQ_MODEL=llama-3.3-70b-versatile
+```
+
+### 5. Initialize the Database & Knowledge Base
+Run the setup scripts to build the SQLite database, generate the Metro SOPs, and build the FAISS vector index:
+```bash
+python src/db/seed.py
+python setup_sops.py
+```
+
+### 6. Run the Application
+Start the Streamlit frontend. It will automatically open in your browser at `http://localhost:8501`.
+```bash
+streamlit run app.py
+```
+
+---
+
 ## 1. Agentic Architecture
 
 The core intelligence of the platform is powered by **LangGraph**, which orchestrates a team of specialized AI agents. Each agent handles a specific cognitive step in the complaint lifecycle.
