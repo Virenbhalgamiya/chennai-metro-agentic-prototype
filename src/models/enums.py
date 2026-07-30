@@ -1,0 +1,46 @@
+from enum import Enum
+
+class ComplaintCategory(str, Enum):
+    TICKETING_SMART_CARDS = "TICKETING_SMART_CARDS"
+    STATION_FACILITIES = "STATION_FACILITIES"
+    TRAIN_OPERATIONS = "TRAIN_OPERATIONS"
+    STAFF_BEHAVIOR = "STAFF_BEHAVIOR"
+    SAFETY_SECURITY = "SAFETY_SECURITY"
+    OTHER = "OTHER"
+
+class Severity(str, Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    CRITICAL = "CRITICAL"
+
+class ComplaintSource(str, Enum):
+    WEB = "WEB"
+    MOBILE = "MOBILE"
+    EMAIL = "EMAIL"
+    WHATSAPP = "WHATSAPP"
+    CALL_CENTRE = "CALL_CENTRE"
+
+class CaseStatus(str, Enum):
+    NEW = "NEW"
+    IN_PROGRESS = "IN_PROGRESS"
+    HUMAN_TRIAGE = "HUMAN_TRIAGE"
+    AWAITING_REVIEW = "AWAITING_REVIEW"
+    ESCALATED = "ESCALATED"
+    RESOLVED = "RESOLVED"
+    CLOSED = "CLOSED"
+
+class OfficerStatus(str, Enum):
+    AVAILABLE = "AVAILABLE"
+    BUSY = "BUSY"
+    UNAVAILABLE = "UNAVAILABLE"
+
+class SLAStatus(str, Enum):
+    ON_TRACK = "ON_TRACK"
+    AT_RISK = "AT_RISK"
+    BREACHED = "BREACHED"
+    COMPLETED = "COMPLETED"
+
+class ItemStatus(str, Enum):
+    AVAILABLE = "AVAILABLE"
+    CLAIMED = "CLAIMED"
