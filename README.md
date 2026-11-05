@@ -14,7 +14,7 @@ Follow these steps to run the Chennai Metro Agentic AI Prototype on your local m
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/chennai-metro-agentic-prototype.git
+git clone https://github.com/Virenbhalgamiya/chennai-metro-agentic-prototype.git
 cd chennai-metro-agentic-prototype
 ```
 
